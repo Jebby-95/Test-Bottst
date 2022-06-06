@@ -1,0 +1,19 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">  
+<body>
+     <div class="container mt-5"> 
+	     <h2 th:text="${dipendente.id}"/>
+	     <h4 th:text="${'Persona:'+dipendente.persona}"/>
+	     <h4 th:text="${'Data Inizio:'+dipendente.dataInizio}"/>
+	     <h4 th:text="${'Data Fine:'+dipendente.dataFine}"/>
+	     <h4 th:text="${'Grado:'+dipendente.grado}"/>
+	     <h4 th:text="${'Stipendio:'+dipendente.stipendio}"/>
+	   
+	     
+	     <hr>
+         <h6><a href="/dipendenti">Torna a dipendenti</a></h6>	     
+     </div>
+     
+     
+</body>
+</html>

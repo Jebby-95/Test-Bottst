@@ -1,0 +1,27 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="parts :: main_head"/>  
+<body>
+
+	 <div th:replace="parts :: topbar" />
+      
+     <div class="container mt-5"> 
+	     <h2 th:text="${title}"/>
+	     
+	     <ul> 
+	 		<li th:each="azienda:${aziende}">	
+				<a th:text="${azienda.nome}" th:href="${'viewazienda/view/'+azienda.id}" />
+			</li >  
+	     </ul>
+	     
+	     
+	     <a th:href="${'createazienda'}">Aggiungi azienda</a>
+	     
+     </div>
+     
+     <div>Aggiungi persona:  <a th:href="${'/createpersona'}">new</a></div>
+     <div>Aggiungi Reparto:  <a th:href="${'/createreparto'}">new</a></div>
+     <div>Aggiungi dipendente:  <a th:href="${'/createdipendente'}">new</a></div>
+     
+</body>
+</html>

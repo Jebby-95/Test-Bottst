@@ -1,0 +1,41 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+     
+     <div class="container mt-5"> 
+     <h2>Crea nuova azienda</h2>
+		  <form action="/addazienda">
+		    <div class="form-group">
+		      <label for="nome">Nome:</label>
+		      <input type="text" class="form-control" id="nome" placeholder="Inserire il nome" name="nome">
+		    </div>
+		    <div class="form-group">
+		      <label for="sede">Sede:</label>
+		      <input type="text" class="form-control" id="sede" placeholder="Inserire la sede" name="sede">
+		    </div>
+		    <div class="form-group">
+		      <label for="dataFondazione">Data di fondazione:</label>
+		      <input type="text" class="form-control" id="dataFondazione" placeholder="Inserire la data di fondazione" name="dataFondazione">
+		    </div> 
+		    <div class="form-group">
+		      <label for="settore">Settore:</label>
+		      <input type="text" class="form-control" id="settore" placeholder="Inserire il settore" name="settore">
+		    </div>
+		    <div class="form-group">
+		      <label for="info">Info:</label>
+		      <input type="text" class="form-control" id="info" placeholder="Inserire info" name="info">
+		    </div> 
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		  </form>
+	</div>
+     
+</body>
+</html>

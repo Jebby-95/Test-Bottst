@@ -1,0 +1,44 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="parts :: main_head"/>  
+<body>
+
+	 <div th:replace="parts :: topbar" />
+      
+     <div class="container mt-5"> 
+	     Nome:<h2 th:text="${reparto.nome}"/>
+	     Sede:<h2 th:text="${reparto.citta}"/>
+	     Fondazione:<h2 th:text="${reparto.dataFondazione}"/>
+	     Settore:<h2 th:text="${reparto.orarioApertura}"/>
+	     Info:<h2 th:text="${reparto.orarioChiusura}"/>
+	     
+	     
+	     <ul> 
+	     	<li>
+	     	
+	     		<div th:each="persona:${persone}">
+	     			<div th:text="${persona.nome}"></div>
+	     			<div th:text="${persona.cognome}"></div>
+	     			<div th:text="${persona.email}"></div>
+	     		</div>
+	 			<div th:each="dipendente:${dipendenti}">
+					<div th:text="${dipendente.stipendio}"></div>
+				</div > 
+	     	</li> 
+	     </ul>
+	     
+	     <a th:href="${createdipendente}">Aggiungi Dipendente</a>
+	     
+	       <h6>	
+     	    <a th:href="${'/reparto/delete?id='+reparto.id}">
+
+     			<span th:text="${remove}" />
+     	    </a>
+     	 </h6>
+	     
+	     
+	     <a th:href="${back}">Torna indietro</a>
+     </div>
+     
+</body>
+</html>

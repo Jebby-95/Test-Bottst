@@ -1,0 +1,35 @@
+<!DOCTYPE HTML> 
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="parts :: main_head"/>  
+<body>
+
+	 <div th:replace="parts :: topbar" />
+      
+     <div class="container mt-5"> 
+	     Nome:<h2 th:text="${azienda.nome}"/>
+	     Sede:<h2 th:text="${azienda.sede}"/>
+	     Fondazione:<h2 th:text="${azienda.dataFondazione}"/>
+	     Settore:<h2 th:text="${azienda.settore}"/>
+	     Info:<h2 th:text="${azienda.info}"/>
+	     
+	     
+	     <ul> 
+	 		<li th:each="reparto:${reparti}">	
+				<a th:text="${reparto.nome}" th:href="${'/viewreparto/view/'+reparto.id}" />
+			</li >  
+	     </ul>
+	     
+	     <a th:href="${'/createreparto'}">Aggiungi Reparto</a>
+	     
+	     
+     </div>
+     <h6>
+     		<a th:href="${'/azienda/delete?id='+azienda.id}">
+
+     			<span th:text="${remove}" />
+     		</a>
+     	</h6>
+     	
+     	<a th:href="${'/'}">Torna alla home</a>
+</body>
+</html>
